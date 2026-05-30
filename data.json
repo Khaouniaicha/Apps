@@ -1,1 +1,85 @@
-
+{
+  "reception": {
+    "title": {
+      "ar": "معرض الاستقبال والترحيب",
+      "fr": "Galerie d'Accueil",
+      "en": "Reception Gallery"
+    },
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800",
+        "caption": { "ar": "استقبال الضيوف", "fr": "Accueil des invités", "en": "Guest Reception" }
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800",
+        "caption": { "ar": "لحظة الوصول", "fr": "Moment d'arrivée", "en": "Arrival Moment" }
+      }
+    ],
+    "videos": [
+      { "url": "", "caption": { "ar": "فيديو استقبال الضيوف", "fr": "Vidéo accueil", "en": "Reception Video" } }
+    ]
+  },
+  "opening": {
+    "title": { "ar": "معرض الافتتاح الرسمي", "fr": "Galerie d'Ouverture", "en": "Opening Gallery" },
+    "images": [
+      { "url": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=800", "caption": { "ar": "قاعة الحفل", "fr": "Salle de cérémonie", "en": "Ceremony Hall" } }
+    ],
+    "videos": []
+  },
+  "graduates": {
+    "title": { "ar": "معرض دخول الخريجين", "fr": "Galerie des Diplômés", "en": "Graduates Gallery" },
+    "images": [
+      { "url": "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=800", "caption": { "ar": "موكب الخريجين", "fr": "Cortège des diplômés", "en": "Graduates Procession" } }
+    ],
+    "videos": []
+  },
+  "shows": {
+    "title": { "ar": "معرض العروض والنشاطات", "fr": "Galerie des Spectacles", "en": "Shows Gallery" },
+    "images": [
+      { "url": "https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=800", "caption": { "ar": "العرض الموسيقي", "fr": "Spectacle musical", "en": "Musical Performance" } }
+    ],
+    "videos": []
+  },
+  "honors": {
+    "title": { "ar": "معرض تكريم المتفوقين", "fr": "Galerie des Honneurs", "en": "Honors Gallery" },
+    "images": [
+      { "url": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800", "caption": { "ar": "تسليم الجوائز", "fr": "Remise des prix", "en": "Award Delivery" } }
+    ],
+    "videos": []
+  },
+  "closing": {
+    "title": { "ar": "معرض الاختتام والصور التذكارية", "fr": "Galerie de Clôture", "en": "Closing Gallery" },
+    "images": [
+      { "url": "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=800", "caption": { "ar": "الصور الجماعية", "fr": "Photos de groupe", "en": "Group Photos" } }
+    ],
+    "videos": []
+  },
+  "diplomas_delivery": {
+    "title": { "ar": "معرض تسليم الديبلومات", "fr": "Galerie Remise des Diplômes", "en": "Diploma Delivery Gallery" },
+    "images": [
+      { "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800", "caption": { "ar": "تسليم الديبلوم", "fr": "Remise du diplôme", "en": "Diploma Delivery" } }
+    ],
+    "videos": []
+  },
+  "certificates_delivery": {
+    "title": { "ar": "معرض تسليم الشهادات", "fr": "Galerie Distribution des Certificats", "en": "Certificate Distribution Gallery" },
+    "images": [
+      { "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800", "caption": { "ar": "تسليم الشهادة", "fr": "Remise du certificat", "en": "Certificate Delivery" } }
+    ],
+    "videos": []
+  },
+  "honor_certificates": {
+    "title": { "ar": "معرض شهادات الشرف", "fr": "Galerie Certificats d'Honneur", "en": "Honor Certificates Gallery" },
+    "images": [
+      { "url": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800", "caption": { "ar": "شهادة الشرف", "fr": "Certificat d'honneur", "en": "Honor Certificate" } }
+    ],
+    "videos": []
+  },
+  "delivery_moments": {
+    "title": { "ar": "معرض لحظات التسليم", "fr": "Galerie Moments de Remise", "en": "Delivery Moments Gallery" },
+    "images": [
+      { "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800", "caption": { "ar": "لحظة التسليم", "fr": "Moment de remise", "en": "Delivery Moment" } }
+    ],
+    "videos": []
+  }
+}
