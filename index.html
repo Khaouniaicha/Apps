@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>حفل التخرج 2026 — Cérémonie de Graduation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+/* ===========================
+   DESIGN SYSTEM — LUXURY GOLD
+   =========================== */
+:root {
+  --gold:        #c9a84c;
+  --gold-light:  #f0d080;
+  --gold-pale:   #fdf6e3;
+  --gold-deep:   #8b6914;
+  --ink:         #0a0806;
+  --ink-2:       #1a1510;
+  --ink-3:       #2a2218;
+  --cream:       #f5ede0;
+  --cream-2:     #e8ddd0;
+  --smoke:       rgba(201,168,76,0.12);
+  --smoke-2:     rgba(201,168,76,0.06);
+  --glass:       rgba(10,8,6,0.6);
+  --radius:      4px;
+  --transition:  0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+/* BASE */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+  font-family: 'Amiri', 'Playfair Display', Georgia, serif;
+  background: var(--ink);
+  color: var(--cream);
+  overflow-x: hidden;
+  cursor: none;
+}
+body.lang-en, body.lang-fr { direction: ltr; font-family: 'Cormorant Garamond','Playfair Display', Georgia, serif; }
+::selection { background: var(--gold); color: var(--ink); }
+
+/* CUSTOM CURSOR */
+.cursor {
+  width: 10px; height: 10px;
+  background: var(--gold);
+  border-radius: 50%;
+  position: fixed; top:0; left:0; z-index:9999;
+  pointer-events: none;
+  transition: transform 0.15s ease, opacity 0.3s ease;
+  mix-blend-mode: difference;
+}
+.cursor-ring {
+  width: 36px; height: 36px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  position: fixed; top:0; left:0; z-index:9998;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94), width 0.3s, height 0.3s, opacity 0.3s;
+  opacity: 0.6;
+}
+.cursor-ring.hover { width:56px; height:56px; opacity:1; border-color:var(--gold-light); }
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background:var(--ink-2); }
+::-webkit-scrollbar-thumb { background:var(--gold-deep); border-radius:2px; }
+
+/* NAV */
+nav {
+  position: fixed; top:0; width:100%; z-index:1000;
+  padding: 18px 40px;
+  display: flex; justify-content:center; align-items:center; gap:4px;
+  flex-wrap: wrap;
+  background: linear-gradient(to bottom, rgba(10,8,6,0.98), transparent);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  backdrop-filter: blur(20px);
+  transition: padding 0.4s ease;
+}
+nav.scrolled { padding:12px 40px; background:rgba(10,8,6,0.98); }
+nav a {
+  color: var(--cream-2); text-decoration: none;
+  padding: 7px 16px; border-radius:50px;
+  font-size: 0.82rem; letter-spacing:0.08em;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  white-space: nowrap;
+  cursor: none;
+}
+nav a:hover {
+  color: var(--gold-light);
+  border-color: rgba(201,168,76,0.4);
+  background: var(--smoke);
+}
+
+/* LANG SWITCHER */
+.lang-switcher {
+  position: fixed; top: 18px; right: 20px; z-index: 1001;
+  display: flex; gap:4px;
+}
+body.lang-en .lang-switcher, body.lang-fr .lang-switcher { right:auto; left:20px; }
+.lang-btn {
+  background: transparent;
+  color: var(--cream-2);
+  border: 1px solid rgba(201,168,76,0.25);
+  padding: 5px 14px; border-radius:50px;
+  cursor: none; font-size:0.78rem; font-weight:600;
+  letter-spacing:0.06em;
+  transition: var(--transition);
+  font-family: inherit;
+}
+.lang-btn.active { background: var(--gold); color: var(--ink); border-color:var(--gold); }
+.lang-btn:hover:not(.active) { border-color:var(--gold); color:var(--gold); }
+
+/* ========== HERO ========== */
+.hero {
+  height: 100vh; min-height: 700px;
+  position: relative;
+  display: flex; align-items:center; justify-content:center;
+  text-align: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,0.08) 0%, transparent 60%),
+    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1800') center/cover no-repeat;
+  transform: scale(1.05);
+  animation: heroZoom 20s ease-in-out infinite alternate;
+}
+@keyframes heroZoom { from { transform:scale(1.05); } to { transform:scale(1.12); } }
+.hero-overlay {
+  position:absolute; inset:0;
+  background: linear-gradient(180deg,
+    rgba(10,8,6,0.75) 0%,
+    rgba(10,8,6,0.45) 40%,
+    rgba(10,8,6,0.75) 100%);
+}
+.hero-bottom-fade {
+  position:absolute; bottom:0; left:0; right:0; height:200px;
+  background: linear-gradient(to top, var(--ink), transparent);
+}
+.hero-content {
+  position:relative; z-index:2;
+  max-width: 800px; padding: 20px;
+}
+.hero-eyebrow {
+  display: inline-block;
+  font-size:0.72rem; letter-spacing:0.35em;
+  text-transform:uppercase; color:var(--gold);
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 6px 22px; border-radius:50px;
+  margin-bottom: 30px;
+  animation: fadeDown 1s ease both;
+}
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 700;
+  line-height: 1.08;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #f0d080 0%, #c9a84c 40%, #f0d080 70%, #a07830 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color:transparent; background-clip:text;
+  background-size:200% auto;
+  animation: shimmerText 4s linear infinite, fadeDown 1.2s 0.2s ease both;
+}
+@keyframes shimmerText { to { background-position:200% center; } }
+.hero-divider {
+  width:80px; height:1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto 24px;
+  animation: fadeDown 1s 0.4s ease both;
+}
+.hero p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 2;
+  color: rgba(245,237,224,0.8);
+  animation: fadeDown 1s 0.6s ease both;
+}
+.hero-scroll {
+  position:absolute; bottom:40px; left:50%; transform:translateX(-50%);
+  z-index:2; display:flex; flex-direction:column; align-items:center; gap:8px;
+  color:rgba(201,168,76,0.6); font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase;
+  animation: fadeIn 2s 1.5s ease both;
+}
+.hero-scroll-line {
+  width:1px; height:50px;
+  background:linear-gradient(to bottom, rgba(201,168,76,0.6), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse { 0%,100%{opacity:0.4;transform:scaleY(1);} 50%{opacity:1;transform:scaleY(1.2);} }
+
+/* ORNAMENT */
+.ornament {
+  display:flex; align-items:center; gap:16px;
+  justify-content:center; margin:10px 0 30px;
+}
+.ornament-line { flex:1; max-width:120px; height:1px; background:linear-gradient(90deg,transparent,var(--gold-deep)); }
+.ornament-diamond {
+  width:8px; height:8px; background:var(--gold); transform:rotate(45deg);
+  box-shadow:0 0 12px rgba(201,168,76,0.4);
+}
+
+/* ========== SECTION TITLES ========== */
+.section-header { text-align:center; padding:80px 20px 50px; }
+.section-header .eyebrow {
+  display:inline-block; font-size:0.7rem; letter-spacing:0.35em;
+  text-transform:uppercase; color:var(--gold);
+  margin-bottom:16px;
+}
+.section-header h2 {
+  font-size:clamp(2rem,5vw,3.5rem);
+  font-weight:700; color:var(--cream);
+  margin-bottom:20px;
+}
+.section-header .subtitle {
+  color:rgba(245,237,224,0.55);
+  font-style:italic; font-size:1.05rem;
+}
+
+/* ========== PROGRAMME ========== */
+.programme-wrap {
+  max-width:900px; margin:0 auto 100px;
+  padding:0 24px;
+}
+.programme-card {
+  background: var(--ink-2);
+  border: 1px solid rgba(201,168,76,0.18);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+}
+.programme-inner { overflow-x:auto; }
+table.prog {
+  width:100%; border-collapse:collapse;
+}
+table.prog thead tr {
+  background: linear-gradient(135deg, #8b6914, #c9a84c);
+}
+table.prog thead th {
+  padding:16px 24px; text-align:right; color:var(--ink);
+  font-size:0.82rem; font-weight:700; letter-spacing:0.1em;
+  text-transform:uppercase; white-space:nowrap;
+}
+body.lang-en table.prog thead th,
+body.lang-fr table.prog thead th { text-align:left; }
+table.prog tbody tr {
+  border-bottom:1px solid rgba(201,168,76,0.08);
+  transition:background 0.3s ease;
+}
+table.prog tbody tr:last-child { border-bottom:none; }
+table.prog tbody tr:hover { background:var(--smoke-2); }
+table.prog td {
+  padding:14px 24px; font-size:0.95rem;
+  color:var(--cream-2); vertical-align:middle;
+}
+table.prog td:first-child {
+  color:var(--gold); font-weight:700;
+  font-size:0.82rem; letter-spacing:0.05em;
+  white-space:nowrap;
+  border-inline-end:1px solid rgba(201,168,76,0.1);
+}
+
+/* ========== TIMELINE ========== */
+.timeline-section { padding:0 20px 120px; }
+.timeline-wrap { max-width:1100px; margin:0 auto; position:relative; }
+.timeline-axis {
+  position:absolute;
+  top:0; bottom:0;
+  left:50%; transform:translateX(-50%);
+  width:1px;
+  background:linear-gradient(to bottom, transparent, var(--gold-deep) 10%, var(--gold-deep) 90%, transparent);
+  opacity:0.5;
+}
+body.lang-en .timeline-axis, body.lang-fr .timeline-axis { left:50%; }
+
+.event-row {
+  display:grid;
+  grid-template-columns:1fr 60px 1fr;
+  gap:0; margin-bottom:80px;
+  opacity:0; transform:translateY(50px);
+  transition:opacity 0.8s ease, transform 0.8s ease;
+}
+.event-row.visible { opacity:1; transform:translateY(0); }
+.event-row:nth-child(odd) .event-text-col { order:1; text-align:right; padding-right:50px; }
+.event-row:nth-child(odd) .event-dot-col  { order:2; }
+.event-row:nth-child(odd) .event-img-col  { order:3; padding-left:50px; }
+.event-row:nth-child(even) .event-img-col  { order:1; padding-right:50px; }
+.event-row:nth-child(even) .event-dot-col  { order:2; }
+.event-row:nth-child(even) .event-text-col { order:3; text-align:left; padding-left:50px; }
+
+body.lang-en .event-row:nth-child(odd) .event-text-col,
+body.lang-fr .event-row:nth-child(odd) .event-text-col { text-align:left; padding-left:50px; padding-right:0; }
+body.lang-en .event-row:nth-child(odd) .event-img-col,
+body.lang-fr .event-row:nth-child(odd) .event-img-col { padding-right:50px; padding-left:0; }
+body.lang-en .event-row:nth-child(even) .event-text-col,
+body.lang-fr .event-row:nth-child(even) .event-text-col { text-align:right; padding-right:50px; padding-left:0; }
+body.lang-en .event-row:nth-child(even) .event-img-col,
+body.lang-fr .event-row:nth-child(even) .event-img-col { padding-left:50px; padding-right:0; }
+
+.event-dot-col {
+  display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+  padding-top:30px;
+}
+.event-dot {
+  width:16px; height:16px;
+  background:var(--gold);
+  border-radius:50%;
+  border:3px solid var(--ink);
+  box-shadow:0 0 0 1px var(--gold), 0 0 20px rgba(201,168,76,0.4);
+  position:relative; z-index:1;
+  flex-shrink:0;
+}
+
+.event-text-col { padding-top:20px; }
+.event-label {
+  display:inline-block;
+  font-size:0.68rem; letter-spacing:0.3em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:10px;
+  border-bottom:1px solid rgba(201,168,76,0.3); padding-bottom:4px;
+}
+.event-text-col h3 {
+  font-size:clamp(1.4rem,3vw,2rem);
+  font-weight:700; color:var(--cream);
+  margin-bottom:14px; line-height:1.25;
+}
+.event-text-col p {
+  font-size:0.97rem; line-height:2;
+  color:rgba(245,237,224,0.6);
+  margin-bottom:22px;
+}
+.event-actions { display:flex; gap:12px; flex-wrap:wrap; }
+.event-row:nth-child(even) .event-actions { justify-content:flex-end; }
+body.lang-en .event-row:nth-child(even) .event-actions,
+body.lang-fr .event-row:nth-child(even) .event-actions { justify-content:flex-start; }
+
+.btn-explore {
+  display:inline-flex; align-items:center; gap:8px;
+  background:transparent; color:var(--gold);
+  border:1px solid rgba(201,168,76,0.5);
+  padding:10px 22px; border-radius:50px;
+  font-size:0.82rem; font-weight:600; letter-spacing:0.08em;
+  cursor:none; transition:var(--transition);
+  font-family:inherit;
+  text-decoration:none;
+}
+.btn-explore:hover {
+  background:var(--gold); color:var(--ink);
+  box-shadow:0 10px 30px rgba(201,168,76,0.25);
+}
+.btn-next {
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--smoke); color:var(--cream-2);
+  border:1px solid rgba(201,168,76,0.15);
+  padding:10px 22px; border-radius:50px;
+  font-size:0.82rem; cursor:none; transition:var(--transition);
+  font-family:inherit;
+  text-decoration:none;
+}
+.btn-next:hover { border-color:rgba(201,168,76,0.35); color:var(--cream); }
+
+.event-img-col {}
+.event-card {
+  position:relative; border-radius:12px; overflow:hidden;
+  aspect-ratio:16/11;
+  background:var(--ink-3);
+  border:1px solid rgba(201,168,76,0.12);
+  box-shadow:0 30px 60px rgba(0,0,0,0.5);
+  cursor:none;
+  transition:transform 0.5s ease, box-shadow 0.5s ease;
+}
+.event-card:hover { transform:translateY(-6px) scale(1.015); box-shadow:0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.25); }
+.event-card img {
+  width:100%; height:100%; object-fit:cover;
+  transition:transform 0.8s ease;
+}
+.event-card:hover img { transform:scale(1.07); }
+.event-card-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(10,8,6,0.7) 0%, transparent 50%);
+}
+.event-card-caption {
+  position:absolute; bottom:0; left:0; right:0; padding:20px;
+  font-size:0.8rem; color:rgba(245,237,224,0.7);
+  letter-spacing:0.05em;
+}
+
+/* ========== DIPLOMAS SECTION ========== */
+.diplomas-section { padding:0 24px 120px; }
+.diplomas-grid {
+  max-width:1100px; margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:24px;
+}
+.diploma-card {
+  background:var(--ink-2);
+  border:1px solid rgba(201,168,76,0.15);
+  border-radius:12px; overflow:hidden;
+  transition:transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  cursor:none;
+  opacity:0; transform:translateY(30px);
+  transition:opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.diploma-card.visible { opacity:1; transform:translateY(0); }
+.diploma-card:hover { border-color:rgba(201,168,76,0.4); box-shadow:0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.2); transform:translateY(-8px); }
+.diploma-card-img { position:relative; aspect-ratio:16/10; overflow:hidden; }
+.diploma-card-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease; }
+.diploma-card:hover .diploma-card-img img { transform:scale(1.08); }
+.diploma-card-img-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(10,8,6,0.6),transparent); }
+.diploma-card-body { padding:22px 22px 14px; }
+.diploma-card-body h3 { font-size:1.1rem; color:var(--cream); margin-bottom:6px; line-height:1.4; }
+.diploma-card-body p { font-size:0.82rem; color:rgba(245,237,224,0.5); margin-bottom:16px; font-style:italic; }
+.diploma-tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:18px; }
+.tag {
+  display:inline-block; padding:3px 12px; border-radius:50px;
+  font-size:0.72rem; font-weight:700; letter-spacing:0.08em;
+}
+.tag-gold { background:rgba(201,168,76,0.15); color:var(--gold); border:1px solid rgba(201,168,76,0.3); }
+.tag-purple { background:rgba(120,60,180,0.15); color:#c09cf0; border:1px solid rgba(120,60,180,0.3); }
+.diploma-card .btn-explore { width:calc(100% - 44px); margin:0 22px 22px; justify-content:center; }
+
+/* ========== MODAL ========== */
+.modal-overlay {
+  display:none; position:fixed; inset:0; z-index:3000;
+  background:rgba(5,4,3,0.96);
+  backdrop-filter:blur(16px);
+  align-items:center; justify-content:center;
+  padding:20px;
+}
+.modal-overlay.active { display:flex; animation:modalFade 0.4s ease; }
+@keyframes modalFade { from{opacity:0;} to{opacity:1;} }
+.modal-box {
+  background:var(--ink-2);
+  border:1px solid rgba(201,168,76,0.2);
+  border-radius:20px;
+  max-width:940px; width:100%;
+  max-height:90vh; overflow-y:auto;
+  padding:50px 40px 40px;
+  position:relative;
+  animation:modalSlide 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+  box-shadow:0 60px 120px rgba(0,0,0,0.8);
+}
+@keyframes modalSlide { from{transform:translateY(40px) scale(0.97);opacity:0;} to{transform:translateY(0) scale(1);opacity:1;} }
+.modal-close {
+  position:absolute; top:18px; left:18px;
+  background:rgba(201,168,76,0.1); color:var(--cream);
+  border:1px solid rgba(201,168,76,0.2); border-radius:50%;
+  width:40px; height:40px; font-size:1.1rem;
+  cursor:none; transition:var(--transition);
+  display:flex; align-items:center; justify-content:center;
+}
+body.lang-en .modal-close, body.lang-fr .modal-close { left:auto; right:18px; }
+.modal-close:hover { background:rgba(255,80,80,0.2); border-color:rgba(255,80,80,0.4); color:#ff6060; transform:rotate(90deg); }
+.modal-header { text-align:center; margin-bottom:36px; }
+.modal-header .eyebrow {
+  display:inline-block; font-size:0.68rem; letter-spacing:0.3em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:10px;
+}
+.modal-title { font-size:clamp(1.6rem,4vw,2.5rem); color:var(--cream); margin-bottom:16px; }
+.modal-divider { width:60px; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); margin:0 auto; }
+.modal-gallery { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; margin-bottom:30px; }
+.gallery-item {
+  position:relative; border-radius:10px; overflow:hidden;
+  aspect-ratio:16/10; background:var(--ink-3);
+  cursor:zoom-in; transition:transform 0.4s ease;
+}
+.gallery-item:hover { transform:scale(1.04); }
+.gallery-item img { width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease; }
+.gallery-item:hover img { transform:scale(1.1); }
+.gallery-item-caption {
+  position:absolute; bottom:0; left:0; right:0; padding:10px 12px;
+  background:linear-gradient(transparent,rgba(10,8,6,0.85));
+  font-size:0.75rem; color:rgba(245,237,224,0.8);
+}
+.modal-videos-title {
+  font-size:1.1rem; color:var(--gold); margin:30px 0 16px;
+  letter-spacing:0.08em; text-align:center;
+}
+.video-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:14px; }
+.video-item { border-radius:10px; overflow:hidden; background:var(--ink-3); border:1px solid rgba(201,168,76,0.1); }
+.video-item video { width:100%; display:block; }
+.video-placeholder {
+  aspect-ratio:16/9; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:10px;
+  color:rgba(245,237,224,0.3);
+}
+.video-placeholder-icon { font-size:2.5rem; opacity:0.5; }
+.video-caption { padding:10px 14px; font-size:0.8rem; color:rgba(245,237,224,0.5); text-align:center; }
+
+/* ========== LIGHTBOX ========== */
+.lightbox {
+  display:none; position:fixed; inset:0; z-index:5000;
+  background:rgba(0,0,0,0.97);
+  align-items:center; justify-content:center;
+  cursor:zoom-out;
+}
+.lightbox.active { display:flex; animation:modalFade 0.3s ease; }
+.lightbox-inner { position:relative; max-width:92vw; max-height:92vh; }
+.lightbox-inner img { max-width:100%; max-height:90vh; border-radius:8px; box-shadow:0 30px 80px rgba(0,0,0,0.6); }
+.lightbox-close {
+  position:absolute; top:-16px; right:-16px;
+  background:var(--gold); color:var(--ink);
+  border:none; border-radius:50%; width:36px; height:36px;
+  font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center;
+  transition:transform 0.3s ease;
+}
+.lightbox-close:hover { transform:scale(1.15) rotate(90deg); }
+
+/* ========== FOOTER ========== */
+footer {
+  background:var(--ink-2);
+  border-top:1px solid rgba(201,168,76,0.12);
+  text-align:center; padding:80px 24px;
+}
+footer .ornament { margin-bottom:24px; }
+footer h3 { font-size:clamp(1.5rem,4vw,2.5rem); color:var(--cream); margin-bottom:12px; }
+footer p { color:rgba(245,237,224,0.4); font-size:0.85rem; letter-spacing:0.1em; }
+
+/* ========== PARTICLES / GOLD DUST ========== */
+#gold-dust { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+.dust {
+  position:absolute; border-radius:50%;
+  background:var(--gold); opacity:0;
+  animation:dustFloat linear infinite;
+}
+@keyframes dustFloat {
+  0% { transform:translateY(100vh) scale(0); opacity:0; }
+  10% { opacity:0.6; }
+  90% { opacity:0.3; }
+  100% { transform:translateY(-20vh) scale(1.5); opacity:0; }
+}
+
+/* ========== UTILITY ANIMATIONS ========== */
+@keyframes fadeDown { from{opacity:0;transform:translateY(-20px);} to{opacity:1;transform:translateY(0);} }
+@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+/* ========== RESPONSIVE ========== */
+@media(max-width:768px){
+  .event-row { grid-template-columns:20px 1fr; gap:0 20px; }
+  .event-row:nth-child(odd) .event-text-col,
+  .event-row:nth-child(even) .event-text-col { order:2; text-align:right; padding:0 16px 0 0; }
+  body.lang-en .event-row:nth-child(odd) .event-text-col,
+  body.lang-en .event-row:nth-child(even) .event-text-col,
+  body.lang-fr .event-row:nth-child(odd) .event-text-col,
+  body.lang-fr .event-row:nth-child(even) .event-text-col { text-align:left; padding:0 0 0 16px; }
+  .event-row:nth-child(odd) .event-dot-col,
+  .event-row:nth-child(even) .event-dot-col { order:1; }
+  .event-img-col { display:none; }
+  .event-row:nth-child(odd) .event-img-col,
+  .event-row:nth-child(even) .event-img-col { display:none; }
+  .timeline-axis { left:20px; }
+  body.lang-en .timeline-axis, body.lang-fr .timeline-axis { left:20px; }
+  .event-actions { flex-direction:column; }
+  nav { gap:2px; padding:12px 10px; }
+  nav a { padding:6px 10px; font-size:0.75rem; }
+  .lang-switcher { top:12px; right:8px; }
+  .modal-box { padding:40px 20px 24px; }
+  .hero h1 { font-size:2.8rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Curseur personnalisé -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Poussière d'or -->
+<div id="gold-dust"></div>
+
+<!-- Navigation -->
+<nav id="mainNav">
+  <a href="#programme" data-i18n="nav_programme">البرنامج</a>
+  <a href="#timeline" data-i18n="nav_reception">الاستقبال</a>
+  <a href="#slide_opening" data-i18n="nav_opening">الافتتاح</a>
+  <a href="#slide_graduates" data-i18n="nav_graduates">الخريجون</a>
+  <a href="#slide_shows" data-i18n="nav_shows">العروض</a>
+  <a href="#slide_honors" data-i18n="nav_honors">التكريم</a>
+  <a href="#diplomas" data-i18n="nav_diplomas">الشهادات</a>
+  <a href="#slide_closing" data-i18n="nav_closing">الاختتام</a>
+</nav>
+
+<!-- Sélecteur de langue -->
+<div class="lang-switcher">
+  <button class="lang-btn active" data-lang="ar">ع</button>
+  <button class="lang-btn" data-lang="fr">Fr</button>
+  <button class="lang-btn" data-lang="en">En</button>
+</div>
+
+<!-- ====== HERO ====== -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-bottom-fade"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow" data-i18n="hero_eyebrow">حفل تخرج — 2026</span>
+    <h1 data-i18n="header_title">رحلة النجاح</h1>
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line" style="background:linear-gradient(90deg,var(--gold-deep),transparent)"></div>
+    </div>
+    <p data-i18n="header_desc">رحلة تفاعلية توثق أبرز محطات حفل التخرج، من الاستقبال الرسمي إلى لحظات التكريم والاختتام.</p>
+  </div>
+  <div class="hero-scroll">
+    <span data-i18n="scroll_hint">مرر للأسفل</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</header>
+
+<!-- ====== PROGRAMME ====== -->
+<section id="programme">
+  <div class="section-header">
+    <div class="eyebrow" data-i18n="prog_eyebrow">الجدول الزمني</div>
+    <h2 data-i18n="programme_title">برنامج الحفل</h2>
+    <div class="ornament"><div class="ornament-line"></div><div class="ornament-diamond"></div><div class="ornament-line" style="background:linear-gradient(90deg,var(--gold-deep),transparent)"></div></div>
+  </div>
+  <div class="programme-wrap">
+    <div class="programme-card">
+      <div class="programme-inner">
+        <table class="prog">
+          <thead><tr>
+            <th data-i18n="prog_time">الوقت</th>
+            <th data-i18n="prog_activity">النشاط</th>
+            <th data-i18n="prog_location">المكان</th>
+          </tr></thead>
+          <tbody>
+            <tr><td>08:30 – 09:00</td><td data-i18n="prog_1">استقبال الضيوف والخريجين</td><td data-i18n="prog_loc_1">بهو القاعة الكبرى</td></tr>
+            <tr><td>09:00 – 09:15</td><td data-i18n="prog_2">الافتتاح الرسمي والنشيد الوطني</td><td data-i18n="prog_loc_2">القاعة الكبرى</td></tr>
+            <tr><td>09:15 – 09:45</td><td data-i18n="prog_3">كلمة مدير المؤسسة</td><td data-i18n="prog_loc_3">المنصة الرئيسية</td></tr>
+            <tr><td>09:45 – 10:15</td><td data-i18n="prog_4">كلمة ممثل الخريجين</td><td data-i18n="prog_loc_4">المنصة الرئيسية</td></tr>
+            <tr><td>10:15 – 10:45</td><td data-i18n="prog_5">العروض الفنية والثقافية</td><td data-i18n="prog_loc_5">مسرح القاعة</td></tr>
+            <tr><td>10:45 – 11:30</td><td data-i18n="prog_6">تكريم المتفوقين وتوزيع الجوائز</td><td data-i18n="prog_loc_6">المنصة الرئيسية</td></tr>
+            <tr><td>11:30 – 12:30</td><td data-i18n="prog_7">تسليم الديبلومات والشهادات</td><td data-i18n="prog_loc_7">المنصة الرئيسية</td></tr>
+            <tr><td>12:30 – 13:00</td><td data-i18n="prog_8">الصور التذكارية والاختتام</td><td data-i18n="prog_loc_8">ساحة المؤسسة</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TIMELINE ====== -->
+<section id="timeline" class="timeline-section">
+  <div class="section-header">
+    <div class="eyebrow" data-i18n="timeline_eyebrow">المحطات</div>
+    <h2 data-i18n="timeline_title">محطات الحفل</h2>
+    <div class="ornament"><div class="ornament-line"></div><div class="ornament-diamond"></div><div class="ornament-line" style="background:linear-gradient(90deg,var(--gold-deep),transparent)"></div></div>
+  </div>
+  <div class="timeline-wrap">
+    <div class="timeline-axis"></div>
+    <div id="timelineContainer"></div>
+  </div>
+</section>
+
+<!-- ====== DIPLOMAS ====== -->
+<section id="diplomas" class="diplomas-section">
+  <div class="section-header">
+    <div class="eyebrow" data-i18n="diplomas_eyebrow">لحظات التتويج</div>
+    <h2 data-i18n="diplomas_title">تسليم الشهادات والديبلومات</h2>
+    <div class="ornament"><div class="ornament-line"></div><div class="ornament-diamond"></div><div class="ornament-line" style="background:linear-gradient(90deg,var(--gold-deep),transparent)"></div></div>
+    <p class="subtitle" data-i18n="diplomas_subtitle">توثيق لأجمل اللحظات في مسيرتكم الأكاديمية</p>
+  </div>
+  <div class="diplomas-grid" id="diplomaGridContainer"></div>
+</section>
+
+<!-- ====== MODAL ====== -->
+<div class="modal-overlay" id="galleryModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-header">
+      <div class="eyebrow" data-i18n="modal_eyebrow">المعرض</div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-divider"></div>
+    </div>
+    <div class="modal-gallery" id="galleryGrid"></div>
+    <div id="videoSection">
+      <div class="modal-videos-title" data-i18n="videos_title">فيديوهات</div>
+      <div class="video-grid" id="videoGrid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== LIGHTBOX ====== -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <button class="lightbox-close">✕</button>
+    <img src="" alt="" id="lightboxImg">
+  </div>
+</div>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="ornament"><div class="ornament-line"></div><div class="ornament-diamond"></div><div class="ornament-line" style="background:linear-gradient(90deg,var(--gold-deep),transparent)"></div></div>
+  <h3 data-i18n="footer_title">رحلة نجاح — حفل تخرج دفعة 2026</h3>
+  <p style="margin-top:12px;" data-i18n="footer_desc">تصميم StoryMap • يعمل بدون إنترنت</p>
+</footer>
+
+<!-- ====== DATA ====== -->
+<script id="activities-db" type="application/json">
+{
+  "reception": {
+    "title": { "ar": "معرض الاستقبال والترحيب", "fr": "Galerie d'Accueil", "en": "Reception Gallery" },
+    "images": [
+      { "url": "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800", "caption": { "ar": "استقبال الضيوف", "fr": "Accueil des invités", "en": "Guest Reception" } },
+      { "url": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800", "caption": { "ar": "لحظة الوصول", "fr": "Moment d'arrivée", "en": "Arrival Moment" } }
+    ],
+    "videos": [{ "url": "", "caption": { "ar": "فيديو استقبال الضيوف", "fr": "Vidéo accueil", "en": "Reception Video" } }]
+  },
+  "opening": {
+    "title": { "ar": "معرض الافتتاح الرسمي", "fr": "Galerie d'Ouverture", "en": "Opening Gallery" },
+    "images": [{ "url": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=800", "caption": { "ar": "قاعة الحفل", "fr": "Salle de cérémonie", "en": "Ceremony Hall" } }],
+    "videos": []
+  },
+  "graduates": {
+    "title": { "ar": "معرض دخول الخريجين", "fr": "Galerie des Diplômés", "en": "Graduates Gallery" },
+    "images": [{ "url": "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=800", "caption": { "ar": "موكب الخريجين", "fr": "Cortège des diplômés", "en": "Graduates Procession" } }],
+    "videos": []
+  },
+  "shows": {
+    "title": { "ar": "معرض العروض والنشاطات", "fr": "Galerie des Spectacles", "en": "Shows Gallery" },
+    "images": [{ "url": "https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=800", "caption": { "ar": "العرض الموسيقي", "fr": "Spectacle musical", "en": "Musical Performance" } }],
+    "videos": []
+  },
+  "honors": {
+    "title": { "ar": "معرض تكريم المتفوقين", "fr": "Galerie des Honneurs", "en": "Honors Gallery" },
+    "images": [{ "url": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800", "caption": { "ar": "تسليم الجوائز", "fr": "Remise des prix", "en": "Award Delivery" } }],
+    "videos": []
+  },
+  "closing": {
+    "title": { "ar": "معرض الاختتام والصور التذكارية", "fr": "Galerie de Clôture", "en": "Closing Gallery" },
+    "images": [{ "url": "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=800", "caption": { "ar": "الصور الجماعية", "fr": "Photos de groupe", "en": "Group Photos" } }],
+    "videos": []
+  },
+  "diplomas_delivery": {
+    "title": { "ar": "معرض تسليم الديبلومات", "fr": "Galerie Remise des Diplômes", "en": "Diploma Delivery Gallery" },
+    "images": [{ "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800", "caption": { "ar": "تسليم الديبلوم", "fr": "Remise du diplôme", "en": "Diploma Delivery" } }],
+    "videos": []
+  },
+  "certificates_delivery": {
+    "title": { "ar": "معرض تسليم الشهادات", "fr": "Galerie Distribution des Certificats", "en": "Certificate Distribution Gallery" },
+    "images": [{ "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800", "caption": { "ar": "تسليم الشهادة", "fr": "Remise du certificat", "en": "Certificate Delivery" } }],
+    "videos": []
+  },
+  "honor_certificates": {
+    "title": { "ar": "معرض شهادات الشرف", "fr": "Galerie Certificats d'Honneur", "en": "Honor Certificates Gallery" },
+    "images": [{ "url": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800", "caption": { "ar": "شهادة الشرف", "fr": "Certificat d'honneur", "en": "Honor Certificate" } }],
+    "videos": []
+  },
+  "delivery_moments": {
+    "title": { "ar": "معرض لحظات التسليم", "fr": "Galerie Moments de Remise", "en": "Delivery Moments Gallery" },
+    "images": [{ "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800", "caption": { "ar": "لحظة التسليم", "fr": "Moment de remise", "en": "Delivery Moment" } }],
+    "videos": []
+  }
+}
+</script>
+
+<script>
+/* ===== DATA ===== */
+let themesData = {};
+const dbScript = document.getElementById('activities-db');
+if (dbScript) {
+  try {
+    const raw = JSON.parse(dbScript.textContent);
+    for (const key in raw) {
+      themesData[key] = { title: raw[key].title, images: raw[key].images || [], videos: raw[key].videos || [] };
+    }
+  } catch(e) { console.error(e); }
+}
+// Try to merge data.json
+fetch('data.json').then(r => r.json()).then(data => {
+  for (const key in data) {
+    themesData[key] = { title: data[key].title, images: data[key].images || [], videos: data[key].videos || [] };
+  }
+}).catch(() => {}).finally(() => init());
+
+/* ===== TRANSLATIONS ===== */
+let lang = 'ar';
+const T = {
+  ar: {
+    nav_programme:'البرنامج', nav_reception:'الاستقبال', nav_opening:'الافتتاح', nav_graduates:'الخريجون', nav_shows:'العروض', nav_honors:'التكريم', nav_diplomas:'الشهادات', nav_closing:'الاختتام',
+    hero_eyebrow:'حفل تخرج — 2026', header_title:'رحلة النجاح', scroll_hint:'مرر للأسفل',
+    header_desc:'رحلة تفاعلية توثق أبرز محطات حفل التخرج، من الاستقبال الرسمي إلى لحظات التكريم والاختتام.',
+    prog_eyebrow:'الجدول الزمني', programme_title:'برنامج الحفل', prog_time:'الوقت', prog_activity:'النشاط', prog_location:'المكان',
+    prog_1:'استقبال الضيوف والخريجين', prog_loc_1:'بهو القاعة الكبرى',
+    prog_2:'الافتتاح الرسمي والنشيد الوطني', prog_loc_2:'القاعة الكبرى',
+    prog_3:'كلمة مدير المؤسسة', prog_loc_3:'المنصة الرئيسية',
+    prog_4:'كلمة ممثل الخريجين', prog_loc_4:'المنصة الرئيسية',
+    prog_5:'العروض الفنية والثقافية', prog_loc_5:'مسرح القاعة',
+    prog_6:'تكريم المتفوقين وتوزيع الجوائز', prog_loc_6:'المنصة الرئيسية',
+    prog_7:'تسليم الديبلومات والشهادات', prog_loc_7:'المنصة الرئيسية',
+    prog_8:'الصور التذكارية والاختتام', prog_loc_8:'ساحة المؤسسة',
+    timeline_eyebrow:'المحطات', timeline_title:'محطات الحفل',
+    diplomas_eyebrow:'لحظات التتويج', diplomas_title:'تسليم الشهادات والديبلومات',
+    diplomas_subtitle:'توثيق لأجمل اللحظات في مسيرتكم الأكاديمية',
+    modal_eyebrow:'المعرض', videos_title:'فيديوهات',
+    btn_explore:'استكشف المعرض', btn_next:'التالي',
+    tag_diploma:'شهادة', tag_official:'رسمي',
+    footer_title:'رحلة نجاح — حفل تخرج دفعة 2026', footer_desc:'تصميم StoryMap • يعمل بدون إنترنت',
+    video_soon:'الفيديو قيد التحضير'
+  },
+  fr: {
+    nav_programme:'Programme', nav_reception:'Accueil', nav_opening:'Ouverture', nav_graduates:'Diplômés', nav_shows:'Spectacles', nav_honors:'Honneurs', nav_diplomas:'Diplômes', nav_closing:'Clôture',
+    hero_eyebrow:'Cérémonie de Graduation — 2026', header_title:'Le Voyage du Succès', scroll_hint:'Défiler',
+    header_desc:'Un voyage interactif retraçant les moments forts de la cérémonie, de l\'accueil à la remise des diplômes.',
+    prog_eyebrow:'Calendrier', programme_title:'Programme de la Cérémonie', prog_time:'Heure', prog_activity:'Activité', prog_location:'Lieu',
+    prog_1:'Accueil des invités et diplômés', prog_loc_1:'Hall de la Grande Salle',
+    prog_2:'Ouverture officielle et hymne national', prog_loc_2:'Grande Salle',
+    prog_3:'Discours du Directeur', prog_loc_3:'Scène Principale',
+    prog_4:'Discours du représentant des diplômés', prog_loc_4:'Scène Principale',
+    prog_5:'Spectacles artistiques et culturels', prog_loc_5:'Théâtre de la Salle',
+    prog_6:'Remise des prix aux majors', prog_loc_6:'Scène Principale',
+    prog_7:'Remise des diplômes et attestations', prog_loc_7:'Scène Principale',
+    prog_8:'Photos souvenir et clôture', prog_loc_8:"Cour de l'établissement",
+    timeline_eyebrow:'Moments clés', timeline_title:'Moments de la Cérémonie',
+    diplomas_eyebrow:'Consécration', diplomas_title:'Remise des Diplômes et Attestations',
+    diplomas_subtitle:'Une documentation des plus beaux instants de votre parcours académique',
+    modal_eyebrow:'Galerie', videos_title:'Vidéos',
+    btn_explore:'Explorer la Galerie', btn_next:'Suivant',
+    tag_diploma:'Diplôme', tag_official:'Officiel',
+    footer_title:'Un Voyage de Réussite — Cérémonie 2026', footer_desc:'Design StoryMap Offline',
+    video_soon:'Vidéo en préparation'
+  },
+  en: {
+    nav_programme:'Program', nav_reception:'Reception', nav_opening:'Opening', nav_graduates:'Graduates', nav_shows:'Shows', nav_honors:'Honors', nav_diplomas:'Diplomas', nav_closing:'Closing',
+    hero_eyebrow:'Graduation Ceremony — 2026', header_title:'The Journey of Success', scroll_hint:'Scroll down',
+    header_desc:'An interactive journey documenting the highlights of the graduation ceremony, from the formal reception to the closing moments.',
+    prog_eyebrow:'Schedule', programme_title:'Ceremony Program', prog_time:'Time', prog_activity:'Activity', prog_location:'Location',
+    prog_1:'Reception of guests and graduates', prog_loc_1:'Main Hall Lobby',
+    prog_2:'Official opening and national anthem', prog_loc_2:'Main Hall',
+    prog_3:'Speech by the Director', prog_loc_3:'Main Stage',
+    prog_4:'Speech by graduate representative', prog_loc_4:'Main Stage',
+    prog_5:'Artistic and cultural performances', prog_loc_5:'Hall Theater',
+    prog_6:'Honoring top students and awards', prog_loc_6:'Main Stage',
+    prog_7:'Diploma and certificate delivery', prog_loc_7:'Main Stage',
+    prog_8:'Souvenir photos and closing', prog_loc_8:'Institution Courtyard',
+    timeline_eyebrow:'Highlights', timeline_title:'Ceremony Highlights',
+    diplomas_eyebrow:'Achievement', diplomas_title:'Diploma & Certificate Delivery',
+    diplomas_subtitle:'A documentation of the most beautiful moments of your academic journey',
+    modal_eyebrow:'Gallery', videos_title:'Videos',
+    btn_explore:'Explore Gallery', btn_next:'Next',
+    tag_diploma:'Diploma', tag_official:'Official',
+    footer_title:'A Journey of Success — Graduation Ceremony 2026', footer_desc:'StoryMap Offline Design',
+    video_soon:'Video coming soon'
+  }
+};
+
+const descMap = {
+  reception:  { ar:'بداية الرحلة الاحتفالية من خلال استقبال الضيوف والخريجين بكل حفاوة وترحاب.', fr:"Début du voyage festif avec l'accueil chaleureux des invités et des diplômés.", en:'The beginning of the celebratory journey with a warm reception of guests and graduates.' },
+  opening:    { ar:'لحظة الانطلاق الرسمية للحفل بكلمات تعبّر عن الاعتزاز والفخر بالخريجين.', fr:'Lancement officiel avec des discours de fierté et de reconnaissance.', en:'Official launch with proud speeches recognizing years of hard work.' },
+  graduates:  { ar:'لحظة دخول الخريجين تمثّل تتويج سنوات من الاجتهاد والعطاء والتميز.', fr:"Entrée des diplômés, aboutissement d'années d'efforts et de persévérance.", en:'Graduates entrance, the culmination of years of effort and dedication.' },
+  shows:      { ar:'العروض الفنية والثقافية المبهرة تجسّد روح الإبداع والتميز.', fr:'Des spectacles artistiques et culturels époustouflants.', en:'Spectacular artistic and cultural performances that embody creativity.' },
+  honors:     { ar:'محطة التكريم تعبّر عن التقدير والاحترام للتميز والاجتهاد.', fr:"Moment des honneurs pour reconnaître l'excellence et le mérite.", en:'The honors moment recognizing excellence, merit, and dedication.' },
+  closing:    { ar:'لحظات الختام والصور التذكارية تحفظ ذكرى هذا اليوم العظيم إلى الأبد.', fr:'Clôture émouvante et photos souvenirs inoubliables.', en:'Emotional closing moments and unforgettable souvenir photos.' }
+};
+
+const timelineOrder  = ['reception','opening','graduates','shows','honors','closing'];
+const diplomaKeys    = ['diplomas_delivery','certificates_delivery','honor_certificates','delivery_moments'];
+
+/* ===== INIT ===== */
+function init() {
+  buildGoldDust();
+  buildTimeline();
+  buildDiplomaCards();
+  setupScrollObserver();
+  setupNav();
+  setupCursor();
+  setupModals();
+  setupLangSwitcher();
+  applyLang('ar');
+}
+
+/* ===== GOLD DUST ===== */
+function buildGoldDust() {
+  const container = document.getElementById('gold-dust');
+  for (let i=0;i<40;i++) {
+    const d = document.createElement('div');
+    d.className = 'dust';
+    const size = 1.5 + Math.random()*3;
+    d.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${Math.random()*100}%;
+      animation-duration:${10+Math.random()*20}s;
+      animation-delay:${Math.random()*20}s;
+      opacity:0;
+    `;
+    container.appendChild(d);
+  }
+}
+
+/* ===== TIMELINE ===== */
+function buildTimeline() {
+  const container = document.getElementById('timelineContainer');
+  container.innerHTML = '';
+  timelineOrder.forEach((key, idx) => {
+    if (!themesData[key]) return;
+    const data = themesData[key];
+    const img = data.images.length ? data.images[0] : null;
+    const imgUrl = img ? img.url : 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800';
+    const imgCaption = img ? (img.caption.ar) : '';
+    const nextKey = timelineOrder[idx+1];
+    const nextId = nextKey ? `slide_${nextKey}` : null;
+
+    const row = document.createElement('div');
+    row.className = 'event-row';
+    row.id = `slide_${key}`;
+
+    row.innerHTML = `
+      <div class="event-text-col">
+        <span class="event-label" data-i18n-eyebrow="${key}">0${idx+1}</span>
+        <h3 data-i18n-title="${key}">${data.title.ar}</h3>
+        <p data-i18n-desc="${key}">${descMap[key]?.ar||''}</p>
+        <div class="event-actions">
+          <button class="btn-explore" data-theme="${key}" data-i18n="btn_explore">استكشف المعرض</button>
+          ${nextId ? `<a class="btn-next" href="#${nextId}" data-i18n="btn_next">التالي</a>` : ''}
+        </div>
+      </div>
+      <div class="event-dot-col"><div class="event-dot"></div></div>
+      <div class="event-img-col">
+        <div class="event-card" data-theme="${key}">
+          <img src="${imgUrl}" alt="${imgCaption}" loading="lazy">
+          <div class="event-card-overlay"></div>
+          <div class="event-card-caption" data-i18n-imgcap="${key}">${imgCaption}</div>
+        </div>
+      </div>
+    `;
+    container.appendChild(row);
+  });
+}
+
+/* ===== DIPLOMA CARDS ===== */
+function buildDiplomaCards() {
+  const container = document.getElementById('diplomaGridContainer');
+  container.innerHTML = '';
+  diplomaKeys.forEach((key, idx) => {
+    if (!themesData[key]) return;
+    const data = themesData[key];
+    const img = data.images.length ? data.images[0] : null;
+    const imgUrl = img ? img.url : '';
+
+    const card = document.createElement('div');
+    card.className = 'diploma-card';
+    card.style.transitionDelay = `${idx*0.1}s`;
+    card.innerHTML = `
+      <div class="diploma-card-img">
+        ${imgUrl ? `<img src="${imgUrl}" alt="${data.title.ar}" loading="lazy">` : ''}
+        <div class="diploma-card-img-overlay"></div>
+      </div>
+      <div class="diploma-card-body">
+        <h3 data-i18n-dip-title="${key}">${data.title.ar}</h3>
+        <p data-i18n-dip-sub="${key}">${data.title.ar}</p>
+        <div class="diploma-tags">
+          <span class="tag tag-gold" data-i18n="tag_diploma">شهادة</span>
+          <span class="tag tag-purple" data-i18n="tag_official">رسمي</span>
+        </div>
+      </div>
+      <button class="btn-explore" data-theme="${key}" data-i18n="btn_explore">استكشف المعرض</button>
+    `;
+    container.appendChild(card);
+  });
+}
+
+/* ===== SCROLL OBSERVER ===== */
+function setupScrollObserver() {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold:0.15 });
+
+  document.querySelectorAll('.event-row').forEach(el => io.observe(el));
+  document.querySelectorAll('.diploma-card').forEach(el => io.observe(el));
+}
+
+/* ===== NAV ===== */
+function setupNav() {
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 80);
+  }, { passive:true });
+}
+
+/* ===== CURSOR ===== */
+function setupCursor() {
+  const cur = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cur.style.transform = `translate(${mx-5}px,${my-5}px)`;
+  });
+  function animRing() {
+    rx += (mx - rx - 18)*0.12; ry += (my - ry - 18)*0.12;
+    ring.style.transform = `translate(${rx}px,${ry}px)`;
+    requestAnimationFrame(animRing);
+  }
+  animRing();
+  document.querySelectorAll('a,button,.event-card,.gallery-item,.diploma-card').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+  });
+}
+
+/* ===== LANGUAGE ===== */
+function setupLangSwitcher() {
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyLang(btn.dataset.lang);
+    });
+  });
+}
+
+function applyLang(l) {
+  lang = l;
+  const t = T[l] || T.ar;
+  document.documentElement.lang = l;
+  document.body.className = l !== 'ar' ? `lang-${l}` : '';
+  document.body.dir = l === 'ar' ? 'rtl' : 'ltr';
+
+  // Static i18n
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n;
+    if (t[k]) el.textContent = t[k];
+  });
+  // Dynamic titles
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const k = el.dataset.i18nTitle;
+    if (themesData[k]?.title?.[l]) el.textContent = themesData[k].title[l];
+  });
+  // Dynamic descriptions
+  document.querySelectorAll('[data-i18n-desc]').forEach(el => {
+    const k = el.dataset.i18nDesc;
+    if (descMap[k]?.[l]) el.textContent = descMap[k][l];
+  });
+  // Diploma titles
+  document.querySelectorAll('[data-i18n-dip-title]').forEach(el => {
+    const k = el.dataset.i18nDipTitle;
+    if (themesData[k]?.title?.[l]) el.textContent = themesData[k].title[l];
+  });
+  document.querySelectorAll('[data-i18n-dip-sub]').forEach(el => {
+    const k = el.dataset.i18nDipSub;
+    if (themesData[k]?.title?.[l]) el.textContent = themesData[k].title[l];
+  });
+  // Eyebrow labels (numbers stay the same, just sequence)
+  document.querySelectorAll('[data-i18n-eyebrow]').forEach((el, idx) => {
+    el.textContent = `0${idx+1}`;
+  });
+  // Image captions
+  document.querySelectorAll('[data-i18n-imgcap]').forEach(el => {
+    const k = el.dataset.i18nImgcap;
+    const img = themesData[k]?.images?.[0];
+    if (img?.caption?.[l]) el.textContent = img.caption[l];
+  });
+}
+
+/* ===== MODALS ===== */
+function setupModals() {
+  const modal      = document.getElementById('galleryModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const galleryGrid= document.getElementById('galleryGrid');
+  const videoGrid  = document.getElementById('videoGrid');
+  const lightbox   = document.getElementById('lightbox');
+  const lightboxImg= document.getElementById('lightboxImg');
+
+  function openModal(theme) {
+    const data = themesData[theme];
+    if (!data) return;
+    modalTitle.textContent = data.title[lang] || data.title.ar;
+
+    galleryGrid.innerHTML = '';
+    data.images.forEach(img => {
+      const item = document.createElement('div');
+      item.className = 'gallery-item';
+      const cap = img.caption?.[lang] || img.caption?.ar || '';
+      item.innerHTML = `<img src="${img.url}" alt="${cap}" loading="lazy"><div class="gallery-item-caption">${cap}</div>`;
+      item.querySelector('img').addEventListener('click', e => {
+        e.stopPropagation();
+        lightboxImg.src = img.url;
+        lightbox.classList.add('active');
+      });
+      galleryGrid.appendChild(item);
+    });
+
+    videoGrid.innerHTML = '';
+    const t = T[lang] || T.ar;
+    data.videos.forEach(vid => {
+      const item = document.createElement('div');
+      item.className = 'video-item';
+      const cap = vid.caption?.[lang] || vid.caption?.ar || '';
+      if (vid.url) {
+        item.innerHTML = `<video controls><source src="${vid.url}" type="video/mp4"></video><div class="video-caption">${cap}</div>`;
+      } else {
+        item.innerHTML = `<div class="video-placeholder"><div class="video-placeholder-icon">▶</div><div class="video-caption">${t.video_soon}</div></div>`;
+      }
+      videoGrid.appendChild(item);
+    });
+
+    document.getElementById('videoSection').style.display = data.videos.length ? '' : 'none';
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.btn-explore, .event-card');
+    if (btn) openModal(btn.dataset.theme);
+  });
+
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Lightbox
+  lightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+  document.querySelector('.lightbox-close').addEventListener('click', e => {
+    e.stopPropagation(); lightbox.classList.remove('active');
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { closeModal(); lightbox.classList.remove('active'); }
+  });
+}
+</script>
+</body>
+</html>
